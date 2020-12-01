@@ -1,8 +1,3 @@
-class UsersController < ApplicationController
-    def root
-    end
+class Api::UsersController < ApplicationController
 
-    def create
-
-    end
 end
