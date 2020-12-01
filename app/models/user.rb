@@ -26,4 +26,19 @@ class User < ApplicationRecord
         user = User.find_by(username: username)
         user && user.valid_password?(password_digest) ? user : nil
     end
+
+    def self.generate_session_token
+        SecureRandom.urlsafe_base64
+    end
+
+    def reset_session_token!
+        self.session_token = generate_session_token()
+        self.save!
+        self.session_token
+    end
+
+    private
+    def ensure_session_token
+        self.session_token ||= generate_session_token()
+    end
 end
