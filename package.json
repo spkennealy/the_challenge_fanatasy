@@ -27,14 +27,17 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --mode=development",
+    "postinstall": "webpack",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/spkennealy/the_challenge_fanatasy.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sean Kennealy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/spkennealy/the_challenge_fanatasy/issues"
