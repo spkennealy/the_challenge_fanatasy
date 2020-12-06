@@ -1,0 +1,53 @@
+$green-button: #1CB954;
+$green-button-hover: #1DD760;
+$blue-button: #3B5998;
+$blue-button-hover: #3A61B2;
+$text: white;
+$main-font: 'Montserrat', sans-serif;
+$home-active-text: #FEFEFE;
+$home-text: #ADADAE;
+
+.green-button {
+    background: $green-button;
+    color: $text;
+    padding: 12px 50px;
+    border-radius: 25px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+.green-button:hover {
+    background: $green-button-hover;
+    cursor: pointer;
+}
+
+.bayify-logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+}
+
+.bayify-logo-inverted {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+#add-font {
+    font-family: $main-font;
+}
+
+.loading-container {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    transform: scale(1.5);
+}

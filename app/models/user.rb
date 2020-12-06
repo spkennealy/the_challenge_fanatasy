@@ -3,23 +3,51 @@
 # Table name: users
 #
 #  id              :bigint           not null, primary key
+#  username        :string           not null
 #  email           :string           not null
 #  password_digest :string           not null
 #  session_token   :string           not null
-#  username        :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
-# Indexes
-#
-#  index_users_on_email          (email) UNIQUE
-#  index_users_on_session_token  (session_token) UNIQUE
-#  index_users_on_username       (username) UNIQUE
-#
+
 class User < ApplicationRecord
     validates :username, :email, :session_token, presence: true
     validates :username, :email, uniqueness: true
     validates :password, length: { minimum: 4, allow_nil: true }
+
+    # has_many :curated_playlists,
+    #     foreign_key: :curator_id,
+    #     class_name: :Playlist
+    # has_many :playlist_follows,
+    #     foreign_key: :follower_id,
+    #     class_name: :PlaylistFollower
+    # has_many :artist_follows,
+    #     foreign_key: :follower_id,
+    #     class_name: :ArtistFollower
+    # has_many :album_follows,
+    #     foreign_key: :follower_id,
+    #     class_name: :AlbumFollower
+    # has_many :track_follows,
+    #     foreign_key: :follower_id,
+    #     class_name: :TrackFollower
+    # has_many :followed_playlists, 
+    #     through: :playlist_follows,
+    #     source: :playlist
+    # has_many :followed_artists, 
+    #     through: :artist_follows,
+    #     source: :artist
+    # has_many :followed_tracks, 
+    #     through: :track_follows,
+    #     source: :track
+    # has_many :followed_albums,
+    #     through: :album_follows,
+    #     source: :album
+    # has_many :friends,  # DOUBLE CHECK IF THIS IS RIGHT
+    #     foreign_key: :id,
+    #     class_name: :User
+    # has_many :followed_podcasts
+    # has_one_attached :profile_photo
 
     attr_reader :password
 

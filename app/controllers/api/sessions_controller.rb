@@ -1,9 +1,9 @@
 class Api::SessionsController < ApplicationController
+   
     def new
     end
-    
+
     def create
-        debugger
         @user = User.find_by_credentials(
             params[:user][:username],
             params[:user][:password]
@@ -14,7 +14,8 @@ class Api::SessionsController < ApplicationController
             render template: 'api/users/show.json.jbuilder'
         else
             render json: { "login": "Incorrect username or password." }, status: 401
-        end 
+        end
+    
     end
 
     def destroy

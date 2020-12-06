@@ -7,11 +7,6 @@ module.exports = {
         path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
         filename: "bundle.js"
     },
-    // devServer: {
-    //     inline: false,
-    //     contentBase: __dirname + "/dist",
-    //     port: 3000
-    // },
     module: {
         rules: [
             {
@@ -19,7 +14,7 @@ module.exports = {
                 exclude: /(node_modules)/,
                 use: {
                     loader: 'babel-loader',
-                    options: {
+                    query: {
                         presets: ['@babel/env', '@babel/react']
                     }
                 },
