@@ -4,21 +4,23 @@ class Api::ChallengersController < ApplicationController
         render :index
     end
     
-    def new
-        @challenger = Challenger.new
-        render :new
-    end
+    # (will likely just put challengers in the DB directly instead of 
+    #  creating functionality to create them)
+    # def new
+    #     @challenger = Challenger.new
+    #     render :new
+    # end
 
-    def create
-        @challenger = Challenger.new(challenger_params)
+    # def create
+    #     @challenger = Challenger.new(challenger_params)
 
-        if @challenger.save
-            # TODO: logic here
-            render 'api/challengers/show.json.jbuilder'
-        else
-            render json: @challenger.errors.messages, status: 422
-        end
-    end
+    #     if @challenger.save
+    #         # logic here
+    #         render 'api/challengers/show.json.jbuilder'
+    #     else
+    #         render json: @challenger.errors.messages, status: 422
+    #     end
+    # end
 
     def show
         @challenger = Challenger.find(params[:id])
@@ -27,6 +29,6 @@ class Api::ChallengersController < ApplicationController
 
     def team_challengers
         @challengers = current_user.team_challengers
-        render :index
+        render :team
     end
 end
