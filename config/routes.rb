@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
+    resources :challengers, only: [:index, :show]
+    # resources :teams
     # resources :artists, only: [:index, :show] do
     #   get 'followed_artists', on: :collection
     #   get 'featured_artists', on: :collection
