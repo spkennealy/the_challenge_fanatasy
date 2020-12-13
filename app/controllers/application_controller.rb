@@ -28,6 +28,6 @@ class ApplicationController < ActionController::Base
     end
 
     def current_season
-        session[:season_id]
+        36
     end
 end

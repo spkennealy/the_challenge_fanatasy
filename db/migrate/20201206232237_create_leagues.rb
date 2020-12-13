@@ -3,6 +3,7 @@ class CreateLeagues < ActiveRecord::Migration[5.2]
     create_table :leagues do |t|
       t.string :name, null: false
       t.string :description
+      t.integer :current_season, null: false
       t.timestamps
     end
   end
