@@ -14,12 +14,12 @@ require 'open-uri'
 
 ActiveRecord::Base.transaction do
 
-    User.create!(username: "Curry30", password: "password", email: "curry30@gsw.com")
+    User.create!(username: "sean", password: "theChallenge", email: "spkennealy@gmail.com")
     # curry = User.find_by(username: "Curry30")
     # curry_photo = open('https://s3-us-west-1.amazonaws.com/bayify-seeds/user_photos/Steph_Curry.jpg')
     # curry.profile_photo.attach(io: curry_photo, filename: 'Steph_Curry')
 
-    User.create!(username: "Bayify", password: "password", email: "admin@bayify.com")
+    User.create!(username: "kierstyn", password: "password", email: "kierstyn.moore@gmail.com")
     # bayify = User.find_by(username: "Bayify")
     # bayify_photo = open('https://bayify-seeds.s3-us-west-1.amazonaws.com/user_photos/bayify-logo.png')
     # bayify.profile_photo.attach(io: bayify_photo, filename: 'Bayify')
