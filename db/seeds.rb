@@ -23,4 +23,7 @@ ActiveRecord::Base.transaction do
     # bayify = User.find_by(username: "Bayify")
     # bayify_photo = open('https://bayify-seeds.s3-us-west-1.amazonaws.com/user_photos/bayify-logo.png')
     # bayify.profile_photo.attach(io: bayify_photo, filename: 'Bayify')
+
+    
+    League.create!(name: "")
 end 

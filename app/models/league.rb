@@ -14,4 +14,7 @@ class League < ApplicationRecord
 
     has_many :users
     has_many :seasons
+    has_many :league_managers,
+        through: :leauge_managers,
+        source: :manager
 end
