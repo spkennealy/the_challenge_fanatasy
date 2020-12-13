@@ -8,6 +8,4 @@ class Api::TeamsController < ApplicationController
         @team = current_user.active_team
         render :show
     end
-
-    
 end
