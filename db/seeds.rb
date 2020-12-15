@@ -25,5 +25,5 @@ ActiveRecord::Base.transaction do
     # bayify.profile_photo.attach(io: bayify_photo, filename: 'Bayify')
 
     
-    League.create!(name: "")
+    # League.create!(name: "")
 end 
