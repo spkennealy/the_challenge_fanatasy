@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       get 'team_challengers', on: :collection
     end
     resources :leagues, only: [:show, :create, :destroy] do
-
+      
     end
     # resources :teams
     # resources :artists, only: [:index, :show] do

@@ -1,0 +1,2 @@
+class TeamOwnership < ApplicationRecord
+end
