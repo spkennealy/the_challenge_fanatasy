@@ -6,7 +6,7 @@ class CreateTeamOwnerships < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_index :team_owners, [:owner_id, :team_id], unique: true
-    add_index :team_owners, :team_id
+    add_index :team_ownerships, [:owner_id, :team_id], unique: true
+    add_index :team_ownerships, :team_id
   end
 end
