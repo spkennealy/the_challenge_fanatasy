@@ -4,7 +4,6 @@
 #
 #  id          :bigint           not null, primary key
 #  description :string
-#  managers    :text             default([]), is an Array
 #  name        :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
