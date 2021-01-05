@@ -1,0 +1,2 @@
+class LeagueManager < ApplicationRecord
+end
