@@ -1,0 +1,2 @@
+class TeamChallenger < ApplicationRecord
+end
