@@ -3,6 +3,11 @@ class Api::LeagueManagersController < ApplicationController
         @league_manager = TeamOwnership.new(league_manager_params)
     end
 
+    def destroy
+        @league_manager = TeamOwnership.find(params[:id])
+        @league_manager.destroy
+    end
+
     private
 
     def league_manager_params
