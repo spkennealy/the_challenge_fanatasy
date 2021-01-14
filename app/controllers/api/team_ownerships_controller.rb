@@ -13,4 +13,4 @@ class Api::TeamOwnershipsController < ApplicationController
     def team_ownership_params
         params.require(:team_ownership).permit(:team_id, :user_id)
     end
-end
+end 
