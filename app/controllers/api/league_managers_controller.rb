@@ -3,7 +3,7 @@ class Api::LeagueManagersController < ApplicationController
         @league_manager = TeamOwnership.new(league_manager_params)
 
         if @league_manager.save
-            render :show
+            render : 
         else
             render json: @league_manager.errors.full_messages, status: 422
         end
