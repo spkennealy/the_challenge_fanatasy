@@ -13,21 +13,29 @@ class Api::TeamsController < ApplicationController
         @team = Team.new(team_params)
 
         if @team.save
-            add_manager()
+            add_manager(@team.id, params[:user_id])
             render :show
         else
             render json: @team.errors.full_messages, status: 422
         end
     end
 
-    def add_manager(team_id)
+    def add_manager(team_id, user_id)
         team_id = params[:id] if team_id == null
-        @team = Team.find(team_id)
+        user_id = params[:user_id] if user_id == null
+        
+        @team_ownership = TeamOwnership.new(team_id, user_id)
+
+        if @team_ownership.save
+            return
+        else
+            render json: @team_ownership.errors.full_messages, status: 422
+        end
     end
 
     private 
 
     def team_params
-        params.require(:team).permit(:league_id, :team_name)
+        params.require(:team).permit(:league_id, :team_name, :user_id)
     end
 end
