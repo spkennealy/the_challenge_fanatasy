@@ -33,6 +33,11 @@ class Api::TeamsController < ApplicationController
         end
     end
 
+    def remove_manager
+        @team_ownership = TeamOwnership.find(params[:id])
+        @team_ownership.destroy
+    end
+
     private 
 
     def team_params
