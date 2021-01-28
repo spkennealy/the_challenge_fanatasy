@@ -1,7 +1,5 @@
 class Api::TeamOwnershipsController < ApplicationController
-    def create
-        @team_ownership = TeamOwnership.new(team_ownership_params)
-    end
+    
 
     def destroy
         @team_ownership = TeamOwnership.find(params[:id])

@@ -29,7 +29,7 @@ class Api::TeamsController < ApplicationController
         if @team_ownership.save
             return
         else
-            render json: @team_ownership.errors.full_messages, status: 422
+            render json: @team_ownership.errors.full_messages, status: 422 
         end
     end
 
