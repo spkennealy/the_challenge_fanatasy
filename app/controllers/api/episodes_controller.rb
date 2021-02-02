@@ -19,6 +19,11 @@ class Api::EpisodesController < ApplicationController
         end
     end
 
+    def destroy
+        @episode = Episode.find(params[:id])
+        @episode.destroy
+    end
+
     private
     def episode_params
         params.require(:episode).permit(:episode_name, :air_date, :season_id)
