@@ -25,6 +25,10 @@ class Api::LeaguesController < ApplicationController
         @league_manager.destroy
     end
 
+    # def remove_team
+    #     @team
+    # end
+
     private 
 
     def league_manager_params

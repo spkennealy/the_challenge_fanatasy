@@ -8,11 +8,6 @@
 #  wins       :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  league_id  :bigint           not null
-#
-# Indexes
-#
-#  index_teams_on_league_id  (league_id)
 #
 
 require 'test_helper'
