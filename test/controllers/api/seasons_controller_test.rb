@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SeasonsControllerTest < ActionDispatch::IntegrationTest
+class Api::SeasonsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
