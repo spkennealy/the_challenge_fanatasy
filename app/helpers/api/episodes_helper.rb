@@ -1,2 +1,2 @@
-module Api::EpisodesControllerHelper
+module Api::EpisodesHelper
 end
