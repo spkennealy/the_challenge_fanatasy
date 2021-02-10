@@ -9,12 +9,14 @@ class Api::SeasonsController < ApplicationController
     end
 
     def create
-        @season = Season.new(season_params)
+        if is_master_user
+            @season = Season.new(season_params)
 
-        if @season.save
-            render :show
-        else
-            render json: @season.errors.messages, status: 422
+            if @season.save
+                render :show
+            else
+                render json: @season.errors.messages, status: 422
+            end
         end
     end
 
