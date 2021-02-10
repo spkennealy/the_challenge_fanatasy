@@ -10,7 +10,12 @@ class Api::SeasonsController < ApplicationController
 
     def create
         @season = Season.new(season_params)
-        render :show
+
+        if @season.save
+            render :show
+        else
+            render json: @season.errors.messages, status: 422
+        end
     end
 
     private
