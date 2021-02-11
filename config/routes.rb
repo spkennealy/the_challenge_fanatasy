@@ -12,6 +12,9 @@ Rails.application.routes.draw do
     resources :seasons do
       get 'challengers', on: :collection
     end
+    resource :episodes do
+      get 'scores', on: :collection
+    end
 
     # resources :teams
     # resources :artists, only: [:index, :show] do
