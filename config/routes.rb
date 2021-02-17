@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     resources :teams do
       get 'team_challengers', on: :collection
     end
+    resources :drafts do
+    end
 
     # resources :teams
     # resources :artists, only: [:index, :show] do
